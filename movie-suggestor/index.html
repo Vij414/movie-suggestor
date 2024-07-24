@@ -3,49 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <title>Movies Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="permission-overlay">
+        <h2>How are you feeling today?</h2>
+        <div class="emoji-options">
+            <span class="emoji" data-mood="happy">😊</span>
+            <span class="emoji" data-mood="sad">😢</span>
+            <span class="emoji" data-mood="low">😞</span>
+            <span class="emoji" data-mood="romantic">😍</span>
+        </div>
+        <h2>How much time do you have to watch?</h2>
+        <div class="time-options">
+            <button data-time="1hr">1 hour</button>
+            <button data-time="2-3hr">2-3 hours</button>
+            <button data-time="more3hr">More than 3 hours</button>
+        </div>
+    </div>
     
-    <div class="nav">
-        <div class="nav_left">
-            <a href="index.html">
-                <img class="nav_logo"  src="/images/netflix-logo.png" alt=""></a>
-        </div>
+    <nav>
+        <ul>
+            <li><a href="#short-films">Short Films</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#series">Series</a></li>
+        </ul>
+    </nav>
 
-        <div class="nav_right">
-            <img  src="/images/user.png" class="nav_avatar" alt="">
-        </div>
+    <div id="content">
+        <section id="short-films">
+            <h2>Short Films</h2>
+            <div class="movie-container" id="short-films-container"></div>
+        </section>
+        <section id="movies">
+            <h2>Movies</h2>
+            <div class="movie-container" id="movies-container"></div>
+        </section>
+        <section id="series">
+            <h2>Series</h2>
+            <div class="movie-container" id="series-container"></div>
+        </section>
     </div>
 
-    <header id="banner">
-        <div id="banner_contents">
-            <h1 id="banner_title"></h1>
-            <div id="banner_buttons">
-                <button id="banner_button">Play</button>
-                <button id="banner_button">My List</button>
-            </div>
-            <p id="banner_description"></p>
-        </div>
-        <div id="banner_fadeBottom"></div>
-    </header>
-
-    <div id="headrow">
-        <div class="row">
-            <h2 class="row_title"></h2>
-            <div class="row_posters"></div>
-        </div>
-    </div>
-
-    <script>
-        window.addEventListener("scroll", function(){
-
-            var nav = document.querySelector(".nav");
-            nav.classList.toggle("active", window.scrollY > 0);
-        })
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
